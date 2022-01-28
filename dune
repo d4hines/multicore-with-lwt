@@ -1,0 +1,5 @@
+(executable
+  (name hello) ; asking dune to build hello.ml
+    (public_name hello.exe)
+    (libraries lwt lwt_domain)) ; name of the binary
+  

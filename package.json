@@ -1,0 +1,11 @@
+{
+    "dependencies": {
+        "ocaml": "*",
+        "@opam/dune": "*",
+        "@opam/lwt": "*",
+        "@opam/lwt_domain": "*"
+    },
+    "resolutions": {
+        "ocaml": "esy-ocaml/ocaml#c015cdcbb30e32ac025abaeb1f02c960dfaa5885"
+    }
+}
