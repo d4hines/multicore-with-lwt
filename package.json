@@ -5,7 +5,16 @@
         "@opam/lwt": "*",
         "@opam/lwt_domain": "*"
     },
+    "devDependencies": {
+        "@opam/ocaml-lsp-server": "*"
+    },
     "resolutions": {
-        "ocaml": "esy-ocaml/ocaml#c015cdcbb30e32ac025abaeb1f02c960dfaa5885"
+        "ocaml": "esy-ocaml/ocaml#c015cdcbb30e32ac025abaeb1f02c960dfaa5885",
+        "@opam/ocaml-lsp-server": "d4hines/ocaml-lsp:ocaml-lsp-server.opam#7851505365c93604de2ce57ff6f81944e254cff1",
+        "@opam/sexplib0": "patricoferris/sexplib0:sexplib0.opam#359ea379d7f2931c8259e3a44d16885f6ec0760d",
+        "@opam/base": "patricoferris/base:base.opam#7822c87b994e022780e15893ccd5e5608c3ccbb5",
+        "@opam/ppxlib": "patricoferris/ppxlib:ppxlib.opam#91c39e958fca1dabf16f64dc7699ace7752f0014",
+        "@opam/easy-format": "nojb/easy-format:easy-format.opam#4568bfa1887146ab6ce41a48c9e00c8c1329c6e4",
+        "@opam/biniou": "EduardoRFS/biniou:biniou.opam#b5f099b4ad594e68383e55ffde6d296439d341b8"
     }
 }
