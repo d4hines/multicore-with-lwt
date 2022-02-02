@@ -3,7 +3,9 @@
         "ocaml": "*",
         "@opam/dune": "*",
         "@opam/lwt": "*",
-        "@opam/lwt_domain": "*"
+        "@opam/lwt_domain": "*",
+        "@taquito/taquito": "^9.0.1",
+        "@taquito/signer": "^9.0.1"
     },
     "devDependencies": {
         "@opam/ocaml-lsp-server": "*"
