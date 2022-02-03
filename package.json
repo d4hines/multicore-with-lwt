@@ -8,7 +8,8 @@
         "@taquito/signer": "^9.0.1"
     },
     "devDependencies": {
-        "@opam/ocaml-lsp-server": "*"
+        "@opam/ocaml-lsp-server": "*",
+        "@opam/utop": "*"
     },
     "resolutions": {
         "ocaml": "esy-ocaml/ocaml#c015cdcbb30e32ac025abaeb1f02c960dfaa5885",

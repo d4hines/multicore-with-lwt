@@ -31,7 +31,7 @@ func main() {
 		log.Fatalf("Could not open the file: %s", err)
 	}
 
-	b := make([]byte, 4)
+	b := make([]byte, 8)
 	for {
 		read, _ := chain_to_machine.Read(b)
 		fmt.Printf("read %d bytes\n", read)
@@ -44,9 +44,6 @@ func main() {
 		fmt.Printf("Incremented number: %d\n", n)
 		binary.LittleEndian.PutUint16(b, n)
 		machine_to_chain.Write(b)
-		print_bytes(b)
-		x := binary.LittleEndian.Uint16(b)
-		fmt.Printf("Converted number: %d\n", x)
 		time.Sleep(1000)
 	}
 }
