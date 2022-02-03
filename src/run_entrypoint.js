@@ -15,7 +15,22 @@ const { InMemorySigner } = require("@taquito/signer");
  * @property {object} payload
  */
 /** @returns {Input} */
-const input = () => JSON.parse(fs.readFileSync(process.stdin.fd));
+
+const input = () => {
+  let x;
+  for (let i = 0; i < 3; i++) {
+    try {
+      x = fs.readFileSync(process.stdin.fd);
+      console.error("stdin: " , x);
+    } catch (error) {
+      if(error.code !== "EAGAIN") {
+        console.error(error);
+      }
+    }
+  }
+  console.error("stdin: ", x);
+  return JSON.parse(x);
+};
 
 /**
  * @typedef OutputFinished
@@ -34,8 +49,11 @@ const output = (data) =>
   fs.writeFileSync(process.stdout.fd, JSON.stringify(data, null, 2));
 
 const finished = (status, hash) => output({ status, hash });
-const error = (error) =>
+const error = (error) => {
+  console.error(error);
   output({ status: "error", error: JSON.stringify(error) });
+}
+  
 
 (async () => {
   const { rpc_node, secret, confirmation, destination, entrypoint, payload } =

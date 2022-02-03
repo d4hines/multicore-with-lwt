@@ -2,5 +2,8 @@
     "ocaml.sandbox": {
         "kind": "esy",
         "root": "${workspaceFolder:ocaml5_lwt_template}"
+    },
+    "files.associations": {
+        "stdio.h": "c"
     }
 }
