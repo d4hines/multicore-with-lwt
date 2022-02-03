@@ -14,7 +14,7 @@ int main(void)
 {
     int write_result, read_result;
     int chain_to_machine, machine_to_chain;
-    int counter = 0;
+    int counter = 3;
 
     mknod(CHAIN_TO_MACHINE, S_IFIFO | 0666, 0);
     mknod(MACHINE_TO_CHAIN, S_IFIFO | 0666, 0);
